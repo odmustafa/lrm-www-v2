@@ -1,0 +1,10 @@
+// @import "util/vars" should be above @import "util/coin_center"
+body {
+   // BG COIN CENTERED
+   background-image: $coin, $bg;
+   background-size: 250px, cover;
+   background-blend-mode: lighten, normal;
+   background-repeat: no-repeat, no-repeat;
+   background-position: 50% 50%, center;
+   opacity: 0.55;
+}

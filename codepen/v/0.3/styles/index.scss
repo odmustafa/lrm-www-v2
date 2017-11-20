@@ -1,0 +1,102 @@
+// import Google Fonts
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Roboto");
+
+// Comment out 'c_center' or 'c_split'
+@import "c_center";
+// @import 'c_split';
+
+// Various utilities
+@import "util/head_foot";
+
+/* start_variables
+background
+// $bg,$coin
+colors
+// $lrm-main-color,$lrm-txt-color,$bg-color
+sizing
+// $lrm-fh
+fonts
+// $font-size-ctrl,$lrm-font-m,$lrm-font-r
+./end_variables */
+
+html {
+   font-size: $font-size-ctrl; //set to scale 'rem' unit
+}
+body {
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   font-family: $lrm-font-r;
+   color: white;
+}
+a {
+   color: white;
+}
+#lrm-main-container {
+   min-height: 100vh;
+   max-width: 85vw;
+   padding: 4px 8px;
+   margin: 0;
+   @media (max-width: 757px) {
+      padding: 4px 2px;
+      max-width: 100vw;
+      font-size: 0.75rem;
+   }
+   @media (max-width: 350px) {
+      padding: 2px;
+      max-width: 100vw;
+      font-size: 0.55rem;
+   }
+}
+
+footer {
+   margin-bottom: 1rem;
+   ul {
+      max-width: 50%;
+   }
+}
+ul {
+   list-style: none;
+   text-transform: uppercase;
+}
+section {
+   overflow-y: scroll;
+   overflow-x: none;
+   width: 100vw;
+   height: 75vh;
+   margin: 0.5rem 0;
+   .lrm-content-stuff {
+      max-width: 80vw;
+      height: 100%;
+      position: relative;
+      margin: 0 auto;
+   }
+
+   card {
+      margin-bottom: 10px;
+   }
+}
+.lrm-nav {
+//    width: 100vw;
+//    background-color: rgba(0, 0, 0, 0);
+//    transition: background-color 100ms ease-in;
+
+//    li {
+//       //      color: white;
+//       padding: 3px 15px;
+//    }
+}
+
+//  scrollbar style
+#lrm-sb::-webkit-scrollbar-track {
+   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+   background-color: rgba(0, 0, 0, 0);
+}
+#lrm-sb::-webkit-scrollbar {
+   width: 10px;
+   background-color: rgba(0, 0, 0, 0);
+}
+#lrm-sb::-webkit-scrollbar-thumb {
+   background-color: rgba(#c6c6c6, 0.1);
+   border: 1px solid rgba(#999, 0.15);
+}

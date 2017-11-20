@@ -1,0 +1,36 @@
+header,
+footer {
+   font-family: $lrm-font-m;
+   height: $lrm-fh;
+   background: transparent;
+   ul {
+      width: 100vw;
+      transition: background-color 100ms ease-in;
+      li {
+         padding: 3px 15px;
+      }
+   }
+   a {
+      &:hover {
+         color: white;
+         text-decoration: underline;
+         &::after {
+            bottom: 0px;
+            opacity: 1;
+            visibility: visible;
+         }
+      }
+      &::after {
+         position: absolute;
+         left: 0;
+         content: "";
+         width: 100%;
+         height: 2px;
+         background: #cacaca;
+         transition: 0.5s;
+         opacity: 0;
+         visibility: hidden;
+         bottom: -8px;
+      }
+   }
+}
