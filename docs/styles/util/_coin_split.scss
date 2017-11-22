@@ -1,0 +1,34 @@
+// @import "util/vars" should be above @import "util/coin_split"
+
+// BG overlay, bg image, and anaglyph placement
+#bg {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   z-index: -1;
+}
+#bg:before,
+#bg:after {
+   content: "";
+   display: block;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+#bg:before {
+   background-color: rgba(0, 0, 0, 0.55);
+   background-size: cover;
+   background-position: center;
+   background-repeat: repeat;
+   z-index: 2;
+}
+#bg:after {
+   background-image: $coin, $coin, $bg;
+   background-size: 225px, 225px, cover;
+   background-repeat: no-repeat, no-repeat, no-repeat;
+   background-position: -112.5px 50%, calc(100% + 112.5px) 50%, center;
+}
